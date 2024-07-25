@@ -1,0 +1,53 @@
+.container {
+    margin-top: 20px;
+  }
+
+
+  .home-container_side-bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(49 47 47);
+    height: 100vh;
+}
+
+.home-conatiner_playlist-container{
+    background-color: #191818;
+    height: 100vh;
+    padding: 0px;
+    overflow-y: auto;
+    padding-top: 3%;
+    padding-left: 2%;
+}
+
+.playlist_card_collection{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(230px,1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+.song_card_item{
+    min-width: 215px;
+}
+
+.home-container_side-bar-item{
+    font-size: 16px;
+    color: white;
+    width: 100%;
+    margin: 10px;
+    padding-left: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
+.home-container_side-bar-item> h5:hover{
+    cursor: pointer;
+    color: rgb(121, 115, 115);
+}
+
+.item{
+    margin-top: 150px;
+}

@@ -1,0 +1,25 @@
+.song-card{
+    height: 250px;
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2e2c2c;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.song-card_title{
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    word-spacing: 0.4px;
+    color: rgb(224, 199, 148);
+    margin-top: 18px;
+    text-transform: capitalize;
+}
+
+.song-card_creator{
+    font-weight: bolder;
+}

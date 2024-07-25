@@ -1,0 +1,99 @@
+.music-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    width: 100%;
+    
+  }
+  
+  /* .music-card {
+    box-sizing: border-box;
+   
+  } */
+  
+  .card {
+    width: 100%;
+    height: 100%;
+    border: none;
+    
+  }
+
+  .music-card-body{
+    background-color: #2e2c2c;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  
+  @media (max-width: 992px) {
+    .music-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .music-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .music-grid {
+      grid-template-columns:(2,1fr);
+     }
+  }
+  @media (max-width: 452px) {
+    .music-grid {
+      grid-template-columns: 1fr;
+     }
+  }
+
+
+
+
+
+
+  .home-container_side-bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(49 47 47);
+    height: 100vh;
+}
+
+.home-conatiner_playlist-container{
+    background-color: #191818;
+    height: 100vh;
+    padding: 0px;
+    overflow-y: auto;
+}
+
+.playlist_card_collection{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+.song_card_item{
+    min-width: 215px;
+}
+
+.home-container_side-bar-item{ 
+    font-size: 16px;
+    color: white;
+    width: 100%;
+    margin: 10px;
+    padding-left: 30px;
+    text-decoration: none;
+    
+}
+
+.home-container_side-bar-item> a:hover{
+    cursor: pointer;
+    color: lightgray;
+}
+
+.item{
+    margin-top: 150px;
+}

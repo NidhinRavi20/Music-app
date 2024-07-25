@@ -1,0 +1,17 @@
+<div class="container">
+  <h2 [style.color] = "'white'">Liked Music</h2>
+  <div class="music-grid ">
+    <div *ngFor="let music of musicList" class="music-card text-center">
+      <div class="card h-100">
+        <div class="card-body music-card-body">
+          <br><br>
+          <h5 [style.color] = "'rgb(224, 199, 148)'" class="card-title">{{ music.name }}</h5>
+          <p [style.color] = "'white'" class="card-text">{{ music.creator }}</p>
+          <br>
+          <!-- <p [style.color] = "'white'" class="card-text">Likes: {{ music.likes }}</p> -->
+          <a [href]="music.url" class="btn btn-info" target="_blank">Play</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

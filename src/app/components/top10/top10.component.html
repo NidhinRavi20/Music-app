@@ -1,0 +1,37 @@
+<div class="container">
+  <h2 [style.color]="'white'">Top 10 Music</h2>
+
+  <div class="home-conatiner_playlist-container">
+    <div class="playlist_card_collection">
+      <div class="song_card_item" *ngFor="let sc of songCards">
+        <app-song-card
+          
+          [title]="sc.title"
+          [creator]="sc.creator"
+          [song_id]="sc.song_id"
+          [link]="sc.songLink"
+        >
+        </app-song-card>
+      </div>
+    </div>
+    <div class="music-grid mt-3 mb-5">
+
+      <div *ngFor="let music of musicList" class="music-card text-center">
+        <div class="card h-100">
+          <div class="card-body music-card-body">
+            <br><br>
+            <h5 [style.color]="'rgb(224, 199, 148)'" class="card-title">{{ music.name }}</h5>
+            <p [style.color]="'white'" class="card-text">
+               {{ music.creator }}
+            </p>
+            <!-- <p [style.color] = "'white'" class="card-text">Likes: {{ music.likes }}</p> -->
+             <br>
+             <br>
+            <a [href]="music.url" class="btn btn-info" target="_blank">Play</a>
+            <button class="btn btn-success " (click)="likeMusic(music)">Like</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

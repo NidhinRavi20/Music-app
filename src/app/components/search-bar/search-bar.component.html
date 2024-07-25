@@ -1,0 +1,40 @@
+<form class="form-inline my-2 my-lg-0" (submit)="onSearch(); $event.preventDefault()">
+    <input  class="form-control search" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="query" name="query">
+    <!-- <button class="btn btn-success " type="submit">Search</button> -->
+  </form>
+  
+  <!-- <div *ngIf="searchResults.length > 0" class="search-results mt-3 ">
+    <div *ngFor="let music of searchResults" class="card mb-3" (click)="playMusic(music.url)">
+      <div class="card-body">
+        <h5 class="card-title">{{ music.name }}</h5>
+        <p class="card-text">Creator: {{ music.creator }}</p>
+        <p class="card-text">Likes: {{ music.likes }}</p>
+        <a [href]="music.url" class="btn btn-primary" target="_blank">Listen</a>
+      </div>
+    </div>
+  </div> -->
+
+
+  <div class="music-grid space">
+
+    <div *ngFor="let music of searchResults" class="music-card text-center">
+      <div class="card h-100">
+        <div class="card-body music-card-body">
+          <br><br>
+          <h5 [style.color]="'rgb(224, 199, 148)'" class="card-title">{{ music.name }}</h5>
+          <p [style.color]="'white'" class="card-text">
+            {{ music.creator }}
+          </p>
+          <!-- <p [style.color] = "'white'" class="card-text">Likes: {{ music.likes }}</p> -->
+           <br>
+           <br>
+          <a [href]="music.url" class="btn btn-info" target="_blank"
+          >Play</a
+          >
+          <!-- <button class="btn btn-success" (click)="likeMusic(music)">
+            Like
+          </button> -->
+        </div>
+      </div>
+    </div>
+  </div>

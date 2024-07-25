@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <h2 [style.color] = "'white'">Add Music</h2>
+    <form (submit)="addMusic(); $event.preventDefault()">
+      <div class="form-group mt-3">
+        <label [style.color] = "'white'" for="name">Name</label>
+        <input type="text" class="form-control mt-2" id="name" [(ngModel)]="music.name" name="name" required>
+      </div>
+      <div class="form-group mt-3">
+        <label [style.color] = "'white'" for="creator">Creator</label>
+        <input type="text" class="form-control mt-2" id="creator" [(ngModel)]="music.creator" name="creator" required>
+      </div>
+      <div class="form-group mt-3">
+        <label [style.color] = "'white'" for="thumbnail">Thumbnail</label>
+        <!-- <input type="file" class="form-control mt-2" id="thumbnail" [(ngModel)]="music.thumbnail" name="thumbnail" required> -->
+      </div>
+      <div class="form-group mt-3">
+        <label [style.color] = "'white'" for="url">URL</label>
+        <input type="text" class="form-control mt-2" id="url" [(ngModel)]="music.url" name="url" required>
+      </div>
+      <button type="submit" class="btn btn-primary mt-4">Add Music</button>
+    </form>
+    </div>
+  </div>
+    
+  </div>

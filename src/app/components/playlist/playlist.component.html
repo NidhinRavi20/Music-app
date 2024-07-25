@@ -1,0 +1,22 @@
+<div class="container">
+    <h2 [style.color] = "'white'">Your Playlists</h2>
+    <div class="form-group">
+      <label for="playlistName">Create Playlist</label>
+      <input type="text" class="form-control" id="playlistName" [(ngModel)]="newPlaylistName" placeholder="Playlist Name">
+      <button class="btn btn-primary mt-2" (click)="createPlaylist()">Create</button>
+    </div>
+  
+    <div *ngFor="let playlist of playlists" class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">{{ playlist.name }}</h5>
+        <div *ngFor="let music of playlist.music" class="card mt-2">
+          <div class="card-body">
+            <h5 class="card-title">{{ music.name }}</h5>
+            <p class="card-text">Creator: {{ music.creator }}</p>
+            <p class="card-text">Likes: {{ music.likes }}</p>
+            <a class="btn btn-primary" (click)="playMusic(music.url)">Play</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
